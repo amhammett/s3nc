@@ -1,0 +1,18 @@
+---
+
+# override default bucket name
+#bucket: my.s3nc.bucket
+
+# currently not implemented
+encrypt: false
+
+# list of local paths or files to upload to s3
+up: []
+
+# files to skip when uploading
+skip: []
+
+# key/value pair of s3 paths (key) to download to local (value)
+# only supports files within dir. not recursive
+down: []
+#  s3/path: /local/path

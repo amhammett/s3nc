@@ -50,6 +50,10 @@ def sync_directory_to_s3(s3nc_bucket, path):
     global S3NC_CONFIG
 
     for root, dirs, files in os.walk(path):
+        for skip in S3NC_CONFIG['skip']:
+            if(skip in dirs):
+                dirs.remove(skip)
+
         for file in files:
             sync_file = True
 
